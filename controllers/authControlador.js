@@ -103,7 +103,7 @@ const login = async (req, res) => {
                 role: user.tipo 
             },
             process.env.JWT_SECRET,
-            { expiresIn: '1m' }
+            { expiresIn: '10m' }
         );
         
         res.json({ token });
