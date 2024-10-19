@@ -51,7 +51,8 @@ const registro = async (req, res) => {
             telefono,
             direccion,
             edad: parseInt(edad),
-            tipo: 'usuario'
+            rol: 'usuario',
+            nivel_aprendizaje: 'principiante'
         }])
         .select();  // Agrega esto para obtener la respuesta completa
 
