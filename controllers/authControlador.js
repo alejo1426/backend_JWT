@@ -16,6 +16,10 @@ const registro = async (req, res) => {
             return res.status(400).json({ error: 'Debes tener al menos 15 años para registrarte.' });
         }
 
+        if (parseInt(edad) > 80) {
+            return res.status(400).json({ error: 'Debes tener menos de 80 años para registrarte.' });
+        }
+
         // Verificar si el usuario o correo ya existen
         const { data: DatoExistente, error: userError } = await supabase
             .from('usuarios')
