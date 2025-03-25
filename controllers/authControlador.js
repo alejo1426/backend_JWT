@@ -16,7 +16,7 @@ const registro = async (req, res) => {
             return res.status(400).json({ error: 'Debes tener al menos 15 y no mayor a 80 años para registrarte.' });
         }
 
-        // Verificar si el usuario o correo ya existen
+        // Verificion si el usuario o correo ya existen
         const { data: DatoExistente, error: userError } = await supabase
             .from('usuarios')
             .select('*')
@@ -54,7 +54,7 @@ const registro = async (req, res) => {
             rol: 'usuario',
             nivel_aprendizaje: 'principiante'
         }])
-        .select();  // Agrega esto para obtener la respuesta completa
+        .select();
 
         console.log('Data insertada:', data);
         console.log('Error en inserción:', error);
