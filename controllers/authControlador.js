@@ -54,7 +54,7 @@ const registro = async (req, res) => {
             rol: 'usuario',
             nivel_aprendizaje: 'principiante'
         }])
-        .select();  // Agrega esto para obtener la respuesta completa
+        .select();
 
         console.log('Data insertada:', data);
         console.log('Error en inserción:', error);
